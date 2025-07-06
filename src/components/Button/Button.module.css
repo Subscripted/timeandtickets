@@ -1,0 +1,44 @@
+.button {
+    padding: 0.6rem 1.2rem;
+    margin: 0.5rem;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.button:hover:not(:disabled) {
+    background-color: #1e40af;
+}
+
+.button:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+}
+
+
+.loginbutton {
+    padding: 0.6rem 1.2rem;
+    margin: 0.5rem;
+    background-color: #eb8825;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.loginbutton:hover:not(:disabled) {
+    background-color: #af4a1e;
+}
+
+.loginbutton:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+}

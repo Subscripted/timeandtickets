@@ -1,0 +1,96 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #1f2937;
+    color: white;
+    overflow: hidden;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease;
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Zustand: geschlossen */
+.closed {
+    width: 60px;
+}
+
+/* Zustand: geöffnet */
+.open {
+    width: 230px;
+}
+
+.toggleButton {
+    all: unset;
+    width: 40px;
+    height: 40px;
+    margin: 1rem auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggleButton span {
+    position: absolute;
+    height: 3px;
+    width: 26px;
+    background: white;
+    border-radius: 2px;
+    left: 7px;
+    transition: all 0.4s ease;
+}
+
+.toggleButton span:nth-child(1) {
+    top: 10px;
+}
+
+.toggleButton span:nth-child(2) {
+    top: 18px;
+}
+
+.toggleButton span:nth-child(3) {
+    top: 26px;
+}
+
+.toggleButton.open span:nth-child(1) {
+    top: 18px;
+    transform: rotate(45deg);
+}
+.toggleButton.open span:nth-child(2) {
+    opacity: 0;
+}
+.toggleButton.open span:nth-child(3) {
+    top: 18px;
+    transform: rotate(-45deg);
+}
+
+.nav {
+    margin-top: 60px;
+    padding: 0 1rem;
+    flex: 1;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav li {
+    margin: 1.2rem 0;
+    font-size: 1.1rem;
+    white-space: nowrap;
+}
+
+.label {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.labelHidden {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
